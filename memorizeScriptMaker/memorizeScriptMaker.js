@@ -1,10 +1,11 @@
 // Script runs to help in memorizing scripts/speeches.
 // Takes the first letter of each word (along with punctuation) 
 // and creates the condensed version.
-
-function isCharacterALetter(char) {
-  return (/[a-zA-Z]/).test(char)
-}
+const para1 = document.getElementById("para1");
+const para2 = document.getElementById("para2");
+const para3 = document.getElementById("para3");
+const para4 = document.getElementById("para4");
+const para5 = document.getElementById("para5");
 
 const firstLetterScript = (para) => {
   const spaceSplitpara = para.split(" ");
@@ -16,6 +17,18 @@ const firstLetterScript = (para) => {
   console.log(letterSplitpara);
 }
 
-const script = ["Hi, I’m Tyiss, the founder of Kumo Link. We help small businesses establish a powerful online presence through high quality web development and SEO optimization. In today’s digital world, having a great website isn’t just about looking good, it’s about being found by the right customers and turning visitors into paying clients.","Startups face unique challenges: tight budgets, fierce competition, and the need to scale fast. Many early-stage companies settle for DIY website builders or generic templates that don’t reflect their brand, aren’t optimized for search engines, and fail to convert visitors into customers. Without a strong digital foundation, even the best startup ideas can struggle to gain traction.","Kumo Link helps startups launch and scale with custom-built, high-performance websites that are designed for growth. We don’t just build websites—we create SEO-optimized, conversion-driven platforms that work as an extension of your business. Our tech stack includes React, Next.js, and Schema.org integration to ensure your site loads fast, ranks high, and stands out in a crowded market. Whether you're pre-launch or scaling rapidly, we build with flexibility in mind so your website can grow alongside your business.","Unlike big agencies that charge sky-high fees or website builders that leave you stuck with a generic design, Kumo Link offers a startup-friendly approach—custom solutions at competitive pricing, designed for scalability. We understand startups need speed, efficiency, and adaptability, so we focus on lean, results-driven development that gets your business online and competitive fast. Plus, with built-in SEO and performance optimization, your site won’t just look good—it will work hard to bring in customers and investors alike.","If you’re launching a startup or scaling your business, let’s talk! A strong online presence can be the difference between getting noticed or getting left behind. You can check out our work at [your website URL], or let’s set up a quick chat to see how Kumo Link can help accelerate your growth."]
+const script = [
+  "Hi, I’m Tyiss, the founder of Kumo Link. We help small businesses establish a powerful online presence through high quality web development and SEO optimization. In today’s digital world, having a great website isn’t just about looking good, it’s about being found by the right customers and turning visitors into paying clients.",
+  "Many small businesses struggle with websites that are outdated, slow, or invisible in search results. They either don’t have the time, expertise, or resources to create an effective online presence. Without proper SEO and optimization, they’re missing out on valuable customers who are searching for their services every day.",
+  "That’s where Kumo Link comes in. We build modern, user-friendly websites that are not just visually appealing but also optimized for search engines, helping businesses rank higher and attract more customers. Our services go beyond web design—we offer SEO consulting, website performance enhancements, and even social media guidance to help businesses maximize their digital footprint. Plus, we structure our packages to be flexible and scalable, so small businesses can afford top-tier digital solutions without breaking the bank.",
+  "Unlike generic website builders or agencies that charge a fortune for cookie-cutter designs, Kumo Link focuses on custom solutions tailored to each client’s needs. We use cutting-edge technology like React, Next.js, and Schema.org integration to ensure every website is fast, responsive, and optimized for growth. Whether you need a brand-new website, an SEO revamp, or ongoing support, we make sure your business gets real, measurable results.",
+  "If you’re ready to take your business’s online presence to the next level, let’s talk! I’d love to discuss how Kumo Link can help your business grow."
+]
 
-script.forEach((p)=>firstLetterScript(p));
+// script.forEach((p)=>firstLetterScript(p));
+
+para1.innerHTML = script[0];
+para2.innerHTML = script[1];
+para3.innerHTML = script[2];
+para4.innerHTML = script[3];
+para5.innerHTML = script[4];
