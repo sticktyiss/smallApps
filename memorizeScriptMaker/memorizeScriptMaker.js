@@ -21,15 +21,29 @@ para1.innerHTML = script[0];
 para2.innerHTML = script[1];
 para3.innerHTML = script[2];
 para4.innerHTML = script[3];
+para5.innerHTML = script[4];
 
 const firstLetterScript = (para) => {
-  const spaceSplitpara = para.innerHTML.split(" ");
+  const spaceSplitpara = para.innerText.split(" ");
   // console.log(spaceSplitpara);
   const letterSplitpara = spaceSplitpara.map((e)=>{
     // console.log(e[0].toUpperCase());
     return (e[0].toUpperCase());
   });
-  console.log(letterSplitpara);
-  para.innerHTML = letterSplitpara;
+  // console.log(letterSplitpara);
+  return letterSplitpara;
 }
-para5.innerHTML = script[4];
+
+const togglePara = (para) => {
+  let paraText = firstLetterScript(para);
+  // console.log(para);
+  if (paraText.length<=1){
+    // console.log("Going back to full paragraph...")
+    paraId = para.id;
+    // console.log(paraId);
+    para.innerText = script[paraId[paraId.length - 1]-1];
+  } else {
+    // console.log("Shortened script...")
+    para.innerText = paraText;
+  }
+}
