@@ -7,16 +7,6 @@ const para3 = document.getElementById("para3");
 const para4 = document.getElementById("para4");
 const para5 = document.getElementById("para5");
 
-const firstLetterScript = (para) => {
-  const spaceSplitpara = para.split(" ");
-  // console.log(spaceSplitpara);
-  const letterSplitpara = spaceSplitpara.map((e)=>{
-    // console.log(e[0].toUpperCase());
-    return (e[0].toUpperCase());
-  });
-  console.log(letterSplitpara);
-}
-
 const script = [
   "Hi, I’m Tyiss, the founder of Kumo Link. We help small businesses establish a powerful online presence through high quality web development and SEO optimization. In today’s digital world, having a great website isn’t just about looking good, it’s about being found by the right customers and turning visitors into paying clients.",
   "Many small businesses struggle with websites that are outdated, slow, or invisible in search results. They either don’t have the time, expertise, or resources to create an effective online presence. Without proper SEO and optimization, they’re missing out on valuable customers who are searching for their services every day.",
@@ -31,4 +21,15 @@ para1.innerHTML = script[0];
 para2.innerHTML = script[1];
 para3.innerHTML = script[2];
 para4.innerHTML = script[3];
+
+const firstLetterScript = (para) => {
+  const spaceSplitpara = para.innerHTML.split(" ");
+  // console.log(spaceSplitpara);
+  const letterSplitpara = spaceSplitpara.map((e)=>{
+    // console.log(e[0].toUpperCase());
+    return (e[0].toUpperCase());
+  });
+  console.log(letterSplitpara);
+  para.innerHTML = letterSplitpara;
+}
 para5.innerHTML = script[4];
