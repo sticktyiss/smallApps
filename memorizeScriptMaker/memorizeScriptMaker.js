@@ -26,18 +26,22 @@ para5.innerHTML = script[4];
 const firstLetterScript = (para) => {
   const spaceSplitpara = para.innerText.split(" ");
   // console.log(spaceSplitpara);
-  const letterSplitpara = spaceSplitpara.map((e)=>{
+  let letterSplitpara = spaceSplitpara.map((e)=>{
     // console.log(e[0].toUpperCase());
     return (e[0].toUpperCase());
   });
-  // console.log(letterSplitpara);
-  return letterSplitpara;
+  if (spaceSplitpara[0].length==spaceSplitpara[1].length && spaceSplitpara[0].length == spaceSplitpara[2].length){
+    letterSplitpara = false;
+    return letterSplitpara;
+  } else {
+  return letterSplitpara.join(" ");
+  }
 }
 
 const togglePara = (para) => {
   let paraText = firstLetterScript(para);
-  // console.log(para);
-  if (paraText.length<=1){
+  // console.log(paraText);
+  if (paraText == false){
     // console.log("Going back to full paragraph...")
     paraId = para.id;
     // console.log(paraId);
